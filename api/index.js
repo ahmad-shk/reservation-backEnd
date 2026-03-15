@@ -1,14 +1,14 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const reservationRoutes = require('../routes/reservationRoutes'); // Route file import karein
+const reservationRoutes = require('../routes/reservationRoutes');
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// Routes ko register karein
+// Routes
 app.use('/api', reservationRoutes);
 
 const PORT = process.env.PORT || 5000;
